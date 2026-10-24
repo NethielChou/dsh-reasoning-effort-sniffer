@@ -49,6 +49,9 @@
     "locale/*.json",
     "icon.svg"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
