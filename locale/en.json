@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Reasoning effort",
+    "description": "Sniffs the thinking levels each third-party provider accepts and declares them, so the composer's model picker offers a strength switch; a sidebar panel switches strength and sniffing per provider."
+  }
+}

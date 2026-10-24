@@ -1,0 +1,53 @@
+{
+  "name": "dsh-reasoning-effort",
+  "version": "0.5.1",
+  "private": true,
+  "type": "module",
+  "description": "Sniffs the thinking levels each third-party pi-ai route accepts and declares them, so the composer's model picker offers a strength switch; a sidebar panel switches sniffing and strength per provider.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "reasoning-effort",
+    "thinking",
+    "pi-ai",
+    "cordis"
+  ],
+  "author": "NethielChou",
+  "license": "MIT",
+  "homepage": "https://github.com/NethielChou/dsh-reasoning-effort#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NethielChou/dsh-reasoning-effort.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NethielChou/dsh-reasoning-effort/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
