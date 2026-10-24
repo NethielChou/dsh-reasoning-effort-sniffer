@@ -37,7 +37,7 @@ DSH 的 `llm-pi-ai` 适配器只有在模型显式声明 `reasoningEfforts` 之�
 发布后可以直接装：
 
 ```bash
-dsh plugin --profile web add dsh-reasoning-effort-sniffer
+dsh plugin --profile web add @nethiel/dsh-reasoning-effort-sniffer
 ```
 
 （`--profile` 换成你实际使用的 profile 名，例如 `desktop`；然后在 DSH 里重启一次。）
@@ -49,9 +49,9 @@ dsh plugin --profile web add dsh-reasoning-effort-sniffer
 1. 把本仓库放到本地任意目录；
 2. 打开 profile 目录 `%USERPROFILE%\.dsh\profiles\desktop\package.json`，在 `dependencies` 里加一行（路径换成你的实际位置）：
    ```json
-   "dsh-reasoning-effort-sniffer": "file:E:/path/to/dsh-reasoning-effort-sniffer"
+   "@nethiel/dsh-reasoning-effort-sniffer": "file:E:/path/to/dsh-reasoning-effort-sniffer"
    ```
-3. 在 `dsh.profile.bundles` 数组末尾加上 `"dsh-reasoning-effort-sniffer"`；
+3. 在 `dsh.profile.bundles` 数组末尾加上 `"@nethiel/dsh-reasoning-effort-sniffer"`；
 4. 在 profile 目录执行安装（DSH 自带的 node + pnpm）：
    ```powershell
    pnpm install --offline
@@ -72,7 +72,7 @@ dsh plugin --profile web add dsh-reasoning-effort-sniffer
 
 ```yaml
 - id: reasoning-effort
-  name: dsh-reasoning-effort-sniffer
+  name: "@nethiel/dsh-reasoning-effort-sniffer"
   config:
     providers:
       your-route-id:
@@ -99,3 +99,4 @@ dsh plugin --profile web add dsh-reasoning-effort-sniffer
 ## 许可证
 
 [MIT](./LICENSE)
+

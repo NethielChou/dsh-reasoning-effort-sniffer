@@ -14,7 +14,7 @@
  * them within a second (volatile update → immediate pass).
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-reasoning-effort-sniffer',
+  id: '@nethiel/dsh-reasoning-effort-sniffer',
   factory(require) {
     const React = require('react');
     const { createPortal } = require('react-dom');

@@ -1,5 +1,5 @@
 {
-  "name": "dsh-reasoning-effort-sniffer",
+  "name": "@nethiel/dsh-reasoning-effort-sniffer",
   "version": "0.6.0",
   "type": "module",
   "description": "Sniffs which thinking levels each third-party pi-ai route actually accepts and declares them, so the composer's model picker offers a strength switch; a sidebar panel switches sniffing and strength per provider.",
@@ -67,4 +67,5 @@
     }
   }
 }
+
 
