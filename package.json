@@ -1,27 +1,28 @@
 {
-  "name": "dsh-reasoning-effort",
-  "version": "0.5.1",
+  "name": "dsh-reasoning-effort-sniffer",
+  "version": "0.6.0",
   "private": true,
   "type": "module",
-  "description": "Sniffs the thinking levels each third-party pi-ai route accepts and declares them, so the composer's model picker offers a strength switch; a sidebar panel switches sniffing and strength per provider.",
+  "description": "Sniffs which thinking levels each third-party pi-ai route actually accepts and declares them, so the composer's model picker offers a strength switch; a sidebar panel switches sniffing and strength per provider.",
   "keywords": [
     "dsh",
     "dsh-plugin",
     "deepseek-harness",
     "reasoning-effort",
     "thinking",
+    "sniffer",
     "pi-ai",
     "cordis"
   ],
   "author": "NethielChou",
   "license": "MIT",
-  "homepage": "https://github.com/NethielChou/dsh-reasoning-effort#readme",
+  "homepage": "https://github.com/NethielChou/dsh-reasoning-effort-sniffer#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NethielChou/dsh-reasoning-effort.git"
+    "url": "git+https://github.com/NethielChou/dsh-reasoning-effort-sniffer.git"
   },
   "bugs": {
-    "url": "https://github.com/NethielChou/dsh-reasoning-effort/issues"
+    "url": "https://github.com/NethielChou/dsh-reasoning-effort-sniffer/issues"
   },
   "exports": {
     ".": "./index.js",

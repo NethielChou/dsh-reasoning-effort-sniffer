@@ -1,5 +1,5 @@
 /**
- * Browser half of `dsh-reasoning-effort`.
+ * Browser half of `dsh-reasoning-effort-sniffer`.
  *
  * The panel is deliberately one thing only: per third-party provider, two
  * switches.
@@ -14,7 +14,7 @@
  * them within a second (volatile update → immediate pass).
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-reasoning-effort',
+  id: 'dsh-reasoning-effort-sniffer',
   factory(require) {
     const React = require('react');
     const { createPortal } = require('react-dom');
@@ -27,7 +27,7 @@ window.__ModuleLoader__.load({
     /** The pi-ai adapter's settings namespace (read-only here: provider list). */
     const PROVIDERS_NS = 'llm-pi-ai';
     /** Stylesheet identity, so a second mount adds no duplicate tag. */
-    const CSS_TAG_ID = 'dsh-reasoning-effort/panel.css';
+    const CSS_TAG_ID = 'dsh-reasoning-effort-sniffer/panel.css';
 
     const zh = {
       title: '思考强度',
@@ -103,7 +103,7 @@ window.__ModuleLoader__.load({
       if (typeof document === 'undefined') return;
       if (document.querySelector('style[data-plugin-css=' + JSON.stringify(CSS_TAG_ID) + ']') !== null) return;
       const tag = document.createElement('style');
-      tag.dataset.plugin = 'dsh-reasoning-effort';
+      tag.dataset.plugin = 'dsh-reasoning-effort-sniffer';
       tag.dataset.pluginCss = CSS_TAG_ID;
       tag.textContent = CSS;
       document.head.appendChild(tag);

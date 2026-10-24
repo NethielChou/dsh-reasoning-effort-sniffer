@@ -1,8 +1,8 @@
-# dsh-reasoning-effort
+# dsh-reasoning-effort-sniffer
 
-给 **DeepSeek Harness（DSH）** 的第三方供应商补上「思考强度」：自动嗅探每个供应商的端点支持哪些档位，把档位声明写进 pi-ai 配置，然后你就可以在**输入框右下角的模型选择器**里像官方 DeepSeek 供应商一样切强度（Low / Medium / High / Max …）。
+给 **DeepSeek Harness（DSH）** 的第三方供应商补上「思考强度」：**实测嗅探**每个供应商的端点支持哪些档位，把档位声明写进 pi-ai 配置，然后你就可以在**输入框右下角的模型选择器**里像官方 DeepSeek 供应商一样切强度（Low / Medium / High / Max …）。
 
-侧栏还有一个极简面板：**每个供应商一行，两个开关**。
+侧栏还有一个极简面板：**每个供应商一行，两个开关**（思考强度 / 嗅探）。
 
 ## 它解决什么问题
 
@@ -37,9 +37,9 @@ DSH 的 `llm-pi-ai` 适配器只有在模型显式声明 `reasoningEfforts` 之�
 1. 把本仓库放到本地任意目录；
 2. 打开 profile 目录 `%USERPROFILE%\.dsh\profiles\desktop\package.json`，在 `dependencies` 里加一行（路径换成你的实际位置）：
    ```json
-   "dsh-reasoning-effort": "file:E:/path/to/dsh-reasoning-effort"
+   "dsh-reasoning-effort-sniffer": "file:E:/path/to/dsh-reasoning-effort-sniffer"
    ```
-3. 在 `dsh.profile.bundles` 数组末尾加上 `"dsh-reasoning-effort"`；
+3. 在 `dsh.profile.bundles` 数组末尾加上 `"dsh-reasoning-effort-sniffer"`；
 4. 在 profile 目录执行安装（DSH 自带的 node + pnpm）：
    ```powershell
    pnpm install --offline
@@ -52,7 +52,7 @@ DSH 的 `llm-pi-ai` 适配器只有在模型显式声明 `reasoningEfforts` 之�
 
 ```yaml
 - id: reasoning-effort
-  name: dsh-reasoning-effort
+  name: dsh-reasoning-effort-sniffer
   config:
     providers:
       your-route-id:
