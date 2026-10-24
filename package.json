@@ -15,6 +15,7 @@
   ],
   "author": "NethielChou",
   "license": "MIT",
+  "icon": "icon.svg",
   "homepage": "https://github.com/NethielChou/dsh-reasoning-effort-sniffer#readme",
   "repository": {
     "type": "git",
