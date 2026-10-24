@@ -1,5 +1,5 @@
 /**
- * Host half of `dsh-reasoning-effort`.
+ * Host half of `dsh-reasoning-effort-sniffer`.
  *
  * Why this exists: a hand-declared pi-ai model reaches the harness with no
  * reasoning metadata until its route declares `reasoningEfforts`, and only then
@@ -66,6 +66,13 @@ export const SUPPORTED_APIS = new Set(['openai-completions']);
 export const NON_CHAT_ID = /(?:^|[^a-z])(ocr|embed|embedding|rerank|tts|whisper|transcribe)(?:[^a-z]|$)/i;
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Services this plugin needs before `apply` may run. The sniffer reads and writes
+ * the pi-ai settings namespace, so without this declaration every pass fails with
+ * `cannot get property "settings" without inject` and silently does nothing.
+ */
+export const inject = ['settings'];
 
 /**
  * Per-route switches. A route absent from the dict uses the defaults: declare
