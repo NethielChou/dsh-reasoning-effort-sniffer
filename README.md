@@ -30,9 +30,21 @@ DSH 的 `llm-pi-ai` 适配器只有在模型显式声明 `reasoningEfforts` 之�
 
 > 选具体强度**不在这个插件里**：始终在输入框右下角的模型选择器里选，和官方 DeepSeek 供应商一致。
 
-## 安装（本地开发版）
+## 安装
 
-目前还没有发布到插件市场，先手动装：
+### 从插件市场 / npm（推荐）
+
+发布后可以直接装：
+
+```bash
+dsh plugin --profile web add dsh-reasoning-effort-sniffer
+```
+
+（`--profile` 换成你实际使用的 profile 名，例如 `desktop`；然后在 DSH 里重启一次。）
+
+### 本地开发版
+
+还没发布时，或想改代码时，手动装：
 
 1. 把本仓库放到本地任意目录；
 2. 打开 profile 目录 `%USERPROFILE%\.dsh\profiles\desktop\package.json`，在 `dependencies` 里加一行（路径换成你的实际位置）：
@@ -45,6 +57,14 @@ DSH 的 `llm-pi-ai` 适配器只有在模型显式声明 `reasoningEfforts` 之�
    pnpm install --offline
    ```
 5. 重启 DSH。
+
+## 安全与隐私
+
+- 插件**只**向你已经在 DSH 里配置过的供应商 `baseURL` 发请求，不会连接任何第三方服务器，也没有遥测。
+- 嗅探请求是极小的普通对话请求：`max_tokens: 32`、内容 `ping`、额外带一个 `reasoning_effort` 字段；每个未声明模型最多两条。
+- 密钥通过 DSH 的凭证服务（`ctx.credentials`）读取，**只放进请求头**；不写日志、不落盘、不进错误信息。
+- 所有配置写入都走 DSH 的设置服务（带修订号 + pi-ai 自己的 schema 校验），不会绕过校验直接改文件。
+- 侧栏面板的两个开关存在插件自己的配置命名空间里，随时可以在面板里关掉嗅探（不再联网）。
 
 ## 配置
 

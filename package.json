@@ -1,7 +1,6 @@
 {
   "name": "dsh-reasoning-effort-sniffer",
   "version": "0.6.0",
-  "private": true,
   "type": "module",
   "description": "Sniffs which thinking levels each third-party pi-ai route actually accepts and declares them, so the composer's model picker offers a strength switch; a sidebar panel switches sniffing and strength per provider.",
   "keywords": [
@@ -23,6 +22,16 @@
   },
   "bugs": {
     "url": "https://github.com/NethielChou/dsh-reasoning-effort-sniffer/issues"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-client-locale": "^0.2.0-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "exports": {
     ".": "./index.js",
@@ -49,6 +58,12 @@
       "inject": [
         "@deepseek-ai/dsh-client-locale"
       ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-alpha.2": "compatible"
+      }
     }
   }
 }
+
