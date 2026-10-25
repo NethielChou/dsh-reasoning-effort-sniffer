@@ -1,5 +1,8 @@
 # dsh-reasoning-effort-sniffer
 
+[![npm version](https://img.shields.io/npm/v/@nethiel/dsh-reasoning-effort-sniffer?logo=npm)](https://www.npmjs.com/package/@nethiel/dsh-reasoning-effort-sniffer)
+[![license](https://img.shields.io/npm/l/@nethiel/dsh-reasoning-effort-sniffer)](./LICENSE)
+
 给 **DeepSeek Harness（DSH）** 的第三方供应商补上「思考强度」：**实测嗅探**每个供应商的端点支持哪些档位，把档位声明写进 pi-ai 配置，然后你就可以在**输入框右下角的模型选择器**里像官方 DeepSeek 供应商一样切强度（Low / Medium / High / Max …）。
 
 侧栏还有一个极简面板：**每个供应商一行，两个开关**（思考强度 / 嗅探）。
